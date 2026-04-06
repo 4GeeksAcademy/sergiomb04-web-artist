@@ -1,0 +1,244 @@
+/* Variables de color */
+:root {
+    --bg-color: #fff;
+    --text-color: #333;
+    --header-bg: #fff;
+    --section-bg: #f9f9f9;
+    --accent-color: #4CAF50;
+    --secondary-accent: #2196F3;
+}
+
+body.dark {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --header-bg: #1e1e1e;
+    --section-bg: #1a1a1a;
+    --accent-color: #66bb6a;
+    --secondary-accent: #42a5f5;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    padding: 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--section-bg);
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+main {
+    margin-top: 60px;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background-color: var(--section-bg);
+}
+
+.section-content {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-accent));
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 5px solid white;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+/* About section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-icons {
+    display: flex;
+    justify-content: space-around;
+    color: var(--accent-color);
+}
+
+/* Career section */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.timeline-item i {
+    color: var(--accent-color);
+}
+
+.timeline-item h3 {
+    margin: 0 0 10px 0;
+}
+
+/* Upcoming section */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.event-card {
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card i {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.event-card h3 {
+    margin: 10px 0;
+}
+
+footer {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: 10px 0;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    section h2 {
+        font-size: 2em;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+footer a {
+    color: #4CAF50;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: 10px 0;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    section h2 {
+        font-size: 2em;
+    }
+}
