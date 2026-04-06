@@ -77,6 +77,14 @@ nav a:hover {
     background-color: var(--section-bg);
 }
 
+nav a:focus-visible,
+#theme-toggle:focus-visible,
+footer a:focus-visible {
+    outline: 3px solid var(--secondary-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
 #theme-toggle {
     background: none;
     border: none;
