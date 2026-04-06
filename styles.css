@@ -6,6 +6,7 @@
     --section-bg: #f9f9f9;
     --accent-color: #4CAF50;
     --secondary-accent: #2196F3;
+    --section-heading-color: #222;
 }
 
 body.dark {
@@ -15,6 +16,7 @@ body.dark {
     --section-bg: #1a1a1a;
     --accent-color: #66bb6a;
     --secondary-accent: #42a5f5;
+    --section-heading-color: white;
 }
 
 /* Estilos generales */
@@ -132,7 +134,7 @@ section h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
     text-align: center;
-    color: white;
+    color: var(--section-heading-color);
 }
 
 /* About section */
